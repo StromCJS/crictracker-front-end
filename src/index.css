@@ -1,0 +1,33 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Global Styling */
+body {
+  @apply bg-gray-900 text-white font-sans;
+}
+
+/* Dark Mode Styling */
+body.dark-mode {
+  @apply bg-gray-800 text-gray-200;
+}
+
+/* Custom Button Styling */
+.btn-primary {
+  @apply bg-blue-500 text-white px-4 py-2 rounded-lg hover:bg-blue-600 transition-all;
+}
+
+/* Dark Mode Button Styling */
+.btn-primary.dark-mode {
+  @apply bg-blue-700 text-gray-200;
+}
+
+/* Container */
+.container {
+  @apply max-w-7xl mx-auto p-4;
+}
+
+/* Dark Mode Container */
+.container.dark-mode {
+  @apply bg-gray-700;
+}
