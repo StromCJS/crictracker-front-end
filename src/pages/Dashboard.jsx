@@ -1,7 +1,12 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-
+import axios from 'axios';
 function Dashboard() {
+  const fetchData = async ()=>{
+    const {data}  = await axios.get('http://localhost:5125/health')
+    console.log(data)
+  } 
+  fetchData()
   return (
     <div className="container py-8 h-screen">
       <section className="hero bg-gray-800 text-white p-6 rounded-lg shadow-md mb-8">
