@@ -1,0 +1,40 @@
+@import "tailwindcss";
+
+html {
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Global Styling (Light Mode as Default) */
+body {
+  @apply bg-gray-100 text-gray-900 font-sans;
+}
+
+/* Dark Mode Styling */
+html.dark body {
+  @apply bg-gray-900 text-white;
+}
+
+/* Custom Button Styling (Light Mode) */
+.btn-primary {
+  @apply bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition-all;
+}
+
+/* Dark Mode Button Styling */
+html.dark .btn-primary {
+  @apply bg-blue-500 text-white hover:bg-blue-600;
+}
+
+/* Container (Light Mode) */
+.container {
+  @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 bg-transparent;
+}
+
+/* Card Styling (Light Mode) */
+.card {
+  @apply bg-white rounded-lg shadow-xl p-6 sm:p-8;
+}
+
+/* Dark Mode Card */
+html.dark .card {
+  @apply bg-gray-800 shadow-gray-700;
+}
